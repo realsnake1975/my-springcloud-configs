@@ -1,3 +1,6 @@
+server:
+  port: ${PORT:8282}
+
 eureka:
   client:
     serviceUrl:
@@ -6,8 +9,6 @@ eureka:
 spring:
   config:
     use-legacy-processing: true
-#  profiles:
-#    active: local
   cloud:
     gateway:
       routes:
