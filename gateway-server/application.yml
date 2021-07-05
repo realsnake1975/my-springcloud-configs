@@ -1,0 +1,27 @@
+server:
+  port: ${PORT:8282}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
+
+spring:
+  application:
+    name: gateway-server
+  output:
+    ansi:
+      enabled: always
+  config:
+    use-legacy-processing: true
+  profiles:
+    active: local
+  cloud:
+    gateway:
+      routes:
+        - id: sample-api
+          # 유레카없이 사용할 경우, uri: http://localhost:9010/
+          uri: lb://sample-api
+          predicates:
+            - Path=/api/sample/**
+            # - RewritePath=/api/sample/(?<path>.*),/api/$\{path}
