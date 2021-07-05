@@ -26,15 +26,9 @@ server:
 
 # spring
 spring:
-  # profiles
-  profiles:
-    active: local
   # application
   application:
     name: my-springcloud
-  output:
-    ansi:
-      enabled: always
   messages:
     basename: i18n/messages
     encoding: UTF-8
@@ -155,7 +149,6 @@ proxy:
   port: 3128
   target:
     - 10.10.10.1
-    - 10.10.10.2
 
 # openfeign
 feign:
