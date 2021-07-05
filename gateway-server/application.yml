@@ -12,8 +12,8 @@ spring:
 #  output:
 #    ansi:
 #      enabled: always
-#  config:
-#    use-legacy-processing: true
+  config:
+    use-legacy-processing: true
 #  profiles:
 #    active: local
   cloud:
