@@ -12,3 +12,8 @@ spring:
           predicates:
             - Path=/api/sample/**
             # - RewritePath=/api/sample/(?<path>.*),/api/$\{path}
+
+logging:
+  level:
+    my:
+      springcloud: info
