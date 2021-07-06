@@ -1,6 +1,6 @@
 spring:
-  config:
-    use-legacy-processing: true
+#  config:
+#    use-legacy-processing: true
   cloud:
     gateway:
       routes:
