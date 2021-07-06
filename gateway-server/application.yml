@@ -4,9 +4,7 @@ server:
 spring:
   application:
     name: gateway-server
-  config:
-    activate:
-      on-profile: local
+#   config:
 #    use-legacy-processing: true
   cloud:
     gateway:
