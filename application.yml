@@ -1,6 +1,4 @@
 server:
-  # port
-  port: 8080
   # embedded tomcat
   tomcat:
     remoteip:
