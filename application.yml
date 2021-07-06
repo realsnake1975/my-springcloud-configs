@@ -26,9 +26,6 @@ server:
 
 # spring
 spring:
-  # application
-  application:
-    name: my-springcloud
   messages:
     basename: i18n/messages
     encoding: UTF-8
