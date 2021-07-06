@@ -1,3 +1,8 @@
+spring:
+  config:
+    active:
+      on-profile: local
+
 eureka:
   client:
     serviceUrl:
