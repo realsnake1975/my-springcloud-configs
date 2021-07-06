@@ -6,7 +6,7 @@ eureka:
     serviceUrl:
       defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
 
-logging:
-  level:
-    my:
-      springcloud: debug
+# logging:
+#   level:
+#     my:
+#       springcloud: debug
