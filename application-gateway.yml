@@ -10,13 +10,3 @@ spring:
           predicates:
             - Path=/api/sample/**
             # - RewritePath=/api/sample/(?<path>.*),/api/$\{path}
-
-logging:
-  level:
-    my:
-      springcloud: info
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
