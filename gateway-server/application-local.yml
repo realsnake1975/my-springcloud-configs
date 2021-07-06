@@ -1,7 +1,0 @@
-server:
-  port: ${PORT:8383}
-
-logging:
-  level:
-    my:
-      springcloud: debug
