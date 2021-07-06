@@ -1,0 +1,16 @@
+server:
+  port: ${PORT:9020}
+
+spring:
+  application:
+    name: sample-service
+
+logging:
+  level:
+    my:
+      springcloud: debug
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
