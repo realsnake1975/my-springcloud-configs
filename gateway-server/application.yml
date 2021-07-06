@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: gateway-server
 #  config:
 #    use-legacy-processing: true
   cloud:
