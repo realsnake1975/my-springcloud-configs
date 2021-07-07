@@ -7,6 +7,15 @@ spring:
 #   config:
 #    use-legacy-processing: true
   cloud:
+    # https://pamesh12.github.io/spring-cloud/spring-cloud-bus.html
+    # https://medium.com/@athulravindran/spring-cloud-config-server-auto-refresh-using-apache-kafka-in-kubernetes-86e3c427926e
+    bus:
+      id: ${spring.application.name}:${spring.profiles.active}:${random.uuid}
+      enabled: true
+      refresh:
+        enabled: true
+      env:
+        enabled: true
     gateway:
       routes:
         - id: sample-service
