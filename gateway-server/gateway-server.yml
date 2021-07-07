@@ -9,12 +9,16 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: sample-api
+        - id: sample-service
           # 유레카없이 사용할 경우, uri: http://localhost:9010/
-          uri: lb://sample-api
+          uri: lb://sample-service
           predicates:
             - Path=/api/sample/**
             # - RewritePath=/api/sample/(?<path>.*),/api/$\{path}
+        - id: account-service
+          uri: lb://account-service
+          predicates:
+            - Path=/api/account/**
 
 logging:
   level:
@@ -25,3 +29,17 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
+
+management:
+  endpoint:
+    info:
+      enabled: true
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        # curl -X POST "http://localhost:8888/actuator/busrefresh", @RefreshScope가 있는 빈의 모든 prop 리프레쉬
+        include:
+          - busrefresh
+          - busenv
+          - health
