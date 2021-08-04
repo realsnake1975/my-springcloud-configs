@@ -1,4 +1,5 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_SERVER:http://host.docker.internal:8761/eureka/}
+#       defaultZone: ${EUREKA_SERVER:http://host.docker.internal:8761/eureka/}
+      defaultZone: ${EUREKA_SERVER:http://10.0.0.50:8761/eureka/}
