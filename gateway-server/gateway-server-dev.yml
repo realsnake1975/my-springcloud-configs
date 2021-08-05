@@ -7,9 +7,9 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: ${EUREKA_SERVER:http://146.56.132.87:8761/eureka/}
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761}/eureka/
   instance:
-    ip-address: 10.0.0.50
+#     ip-address: 10.0.0.50
     prefer-ip-address: true
 
 # spring:
