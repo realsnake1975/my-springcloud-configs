@@ -8,8 +8,9 @@ eureka:
     fetchRegistry: true
     serviceUrl:
 #       defaultZone: ${EUREKA_SERVER:http://host.docker.internal:8761/eureka/}
-      defaultZone: ${EUREKA_SERVER:http://10.0.0.50:8761/eureka/}
+      defaultZone: ${EUREKA_SERVER:http://146.56.132.87:8761/eureka/}
   instance:
+    ip-address: 146.56.132.87
     prefer-ip-address: true
 
 # spring:
