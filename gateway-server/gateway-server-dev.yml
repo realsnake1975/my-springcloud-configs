@@ -4,8 +4,8 @@ eureka:
     disable-delta: true
     lease-renewal-interval-in-seconds: 3
     lease-expiration-duration-in-seconds: 10
-    service-url:
-      default-zone: ${EUREKA_SERVER:http://localhost:8761}/eureka/
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761}/eureka/
   instance:
     prefer-ip-address: true
 
