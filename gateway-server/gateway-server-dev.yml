@@ -1,16 +1,8 @@
 eureka:
   client:
-    registry-fetch-interval-seconds: 10
-    disable-delta: true
-    lease-renewal-interval-in-seconds: 3
-    lease-expiration-duration-in-seconds: 10
     serviceUrl:
       defaultZone: ${EUREKA_SERVER:http://localhost:8761}/eureka/
-  instance:
-    prefer-ip-address: true
 
-# spring:
-#   cloud:
-#     inetutils:
-#       ignored-interfaces: docker*
-#       preferred-networks: 10.0
+spring:
+  zipkin:
+    base-url: ${ZIPKIN_SERVER:http://localhost:9411}
