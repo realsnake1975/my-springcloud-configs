@@ -1,3 +1,5 @@
-# spring:
-#   zipkin:
-#     base-url: ${ZIPKIN_SERVER:ENC(IsF5k0yzYVKtEOflSTfLDtJccNbddhaBVJcYByPEu0mYZq7bqL3xjCbHvs9MWvZSERgkVH/DukxjRek+cVo9Bw==)}
+spring:
+  kafka:
+    bootstrap-servers: ${KAFKA_ADDR:ENC(ov8AcsV7gmIVJ1CkIMJa7Xn2FLsSkcBcmsWbRJMTajqOxr/x9p0y5oguSXuIrbLorWFVRWOLqEecn030CLvogw==)}
+  zipkin:
+    base-url: ${ZIPKIN_SERVER:ENC(IsF5k0yzYVKtEOflSTfLDtJccNbddhaBVJcYByPEu0mYZq7bqL3xjCbHvs9MWvZSERgkVH/DukxjRek+cVo9Bw==)}
