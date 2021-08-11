@@ -7,8 +7,8 @@ spring:
   sleuth:
     sampler:
       probability: 1.0
-  zipkin:
-    base-url: ${ZIPKIN_SERVER:http://localhost:9411}
+#   zipkin:
+#     base-url: ${ZIPKIN_SERVER:http://localhost:9411}
   cloud:
     # https://pamesh12.github.io/spring-cloud/spring-cloud-bus.html
     # https://medium.com/@athulravindran/spring-cloud-config-server-auto-refresh-using-apache-kafka-in-kubernetes-86e3c427926e
@@ -46,8 +46,8 @@ eureka:
     disable-delta: true
     lease-renewal-interval-in-seconds: 3
     lease-expiration-duration-in-seconds: 10
-    serviceUrl:
-      defaultZone: ${EUREKA_SERVER:http://localhost:8761}/eureka/
+#     serviceUrl:
+#       defaultZone: ${EUREKA_SERVER:http://localhost:8761}/eureka/
   instance:
     prefer-ip-address: true
 
