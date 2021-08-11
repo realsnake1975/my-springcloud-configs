@@ -3,7 +3,7 @@ spring:
   zipkin:
     base-url: ${ZIPKIN_SERVER:ENC(IsF5k0yzYVKtEOflSTfLDtJccNbddhaBVJcYByPEu0mYZq7bqL3xjCbHvs9MWvZSERgkVH/DukxjRek+cVo9Bw==)}
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_SERVER:ENC(JLBExtNpp9xTRO2E275h3Rw1FdQmdF5Jf+xINsdyptmK9ooOM0RGGyX7eQa9WG2ZaJy8Ql8gmtxlUx8VTVHH0Q==)}/eureka/
+# eureka:
+#   client:
+#     serviceUrl:
+#       defaultZone: ${EUREKA_SERVER:ENC(JLBExtNpp9xTRO2E275h3Rw1FdQmdF5Jf+xINsdyptmK9ooOM0RGGyX7eQa9WG2ZaJy8Ql8gmtxlUx8VTVHH0Q==)}/eureka/
