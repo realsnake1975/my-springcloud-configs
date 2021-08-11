@@ -45,7 +45,8 @@ eureka:
     lease-renewal-interval-in-seconds: 3
     lease-expiration-duration-in-seconds: 10
     serviceUrl:
-      defaultZone: ${EUREKA_SERVER:http://localhost:8761}/eureka/
+      defaultZone: ${EUREKA_SERVER:ENC(JLBExtNpp9xTRO2E275h3Rw1FdQmdF5Jf+xINsdyptmK9ooOM0RGGyX7eQa9WG2ZaJy8Ql8gmtxlUx8VTVHH0Q==)}/eureka/ 
+      # ${EUREKA_SERVER:http://localhost:8761}/eureka/
   instance:
     prefer-ip-address: true
 
