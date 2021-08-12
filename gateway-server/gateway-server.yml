@@ -7,12 +7,6 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: sample-service
-          # 유레카없이 사용할 경우, uri: http://localhost:9010/
-          uri: lb://sample-service
-          predicates:
-            - Path=/api/sample/**
-            # - RewritePath=/api/sample/(?<path>.*),/api/$\{path}
         - id: account-service
           uri: lb://account-service
           predicates:
