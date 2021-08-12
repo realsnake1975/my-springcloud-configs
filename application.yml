@@ -6,7 +6,7 @@ server:
       remote-ip-header: x-forwarded-for
     uri-encoding: UTF-8
     threads:
-      max: 300
+      max: 200
   # error
   error:
     whitelabel:
@@ -46,7 +46,7 @@ spring:
     hikari:
       minimum-idle: 5
       maximum-pool-size: 5
-      connection-timeout: 25000
+      connection-timeout: 5000
       validation-timeout: 20000
       leak-detection-threshold: 10000
       data-source-properties:
@@ -105,7 +105,6 @@ logging:
       springframework:
         orm:
           jpa: error
-        # 트랜잭션 로그
         transaction: error
     jdbc:
       sqlonly: off
@@ -115,6 +114,22 @@ logging:
       resultsettable: off
       connection: off
 
+# openfeign
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 6000
+        readTimeout: 6000
+        loggerLevel: BASIC
+  okhttp:
+    enabled: true
+
+# RestTemplate, HttpURLConnection 등의 타임아웃
+http:
+  connection-timeout: 6000
+  read-timeout: 6000
+
 my-springcloud:
   springdoc:
     component:
@@ -122,10 +137,9 @@ my-springcloud:
         schema:
           api:
             key:
-  # my-springcloud services
   services:
     uri-root:
-      account:
+      account: http://localhost:9010
 
 # proxy
 proxy:
@@ -133,14 +147,3 @@ proxy:
   port: 3128
   target:
     - 10.10.10.1
-
-# openfeign
-feign:
-  client:
-    config:
-      default:
-        connectTimeout: 5000
-        readTimeout: 5000
-        loggerLevel: BASIC
-  okhttp:
-    enabled: true
