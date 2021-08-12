@@ -1,5 +1,4 @@
 server:
-  # embedded tomcat
   tomcat:
     remoteip:
       protocol-header: x-forwarded-proto
@@ -7,13 +6,11 @@ server:
     uri-encoding: UTF-8
     threads:
       max: 200
-  # error
   error:
     whitelabel:
       enabled: false
     include-exception: false
     include-stacktrace: never
-  # servlet settings
   servlet:
     encoding:
       enabled: true
@@ -22,14 +19,12 @@ server:
   forward-headers-strategy: native
   shutdown: graceful
 
-# spring
 spring:
   messages:
     basename: i18n/messages
     encoding: UTF-8
     fallback-to-system-locale: false
     use-code-as-default-message: true
-  # servlet settings
   servlet:
     multipart:
       max-file-size: 100MB
@@ -95,7 +90,6 @@ management:
         include:
           - health
 
-# logging
 logging:
   level:
     root: info
@@ -143,7 +137,6 @@ my-springcloud:
     uri-root:
       account: http://localhost:9010
 
-# proxy
 proxy:
   host: www.proxy.com
   port: 3128
