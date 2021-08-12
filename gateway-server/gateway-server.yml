@@ -11,9 +11,6 @@ spring:
           uri: lb://account-service
           predicates:
             - Path=/api/account/**
-    loadbalancer:
-      cache:
-        enabled: false
 
 logging:
   level:
