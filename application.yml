@@ -40,7 +40,7 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url:
-    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    driver-class-name: com.mysql.cj.jdbc.Driver
     username:
     password:
     hikari:
@@ -68,15 +68,6 @@ spring:
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-    properties:
-      hibernate:
-        jdbc:
-          batch_size: 10
-  jackson:
-    serialization:
-      indent_output: true
-      WRITE_DATES_AS_TIMESTAMPS: false
-    date-format: yyyy-MM-dd HH:mm:ss
   lifecycle:
     timeout-per-shutdown-phase: 30s
 
@@ -131,12 +122,10 @@ my-springcloud:
         schema:
           api:
             key:
-  # my-springcloud subdomain
-  subdomain:
+  # my-springcloud services
+  services:
     uri-root:
-      discovery:
-      config:
-      gateway:
+      account:
 
 # proxy
 proxy:
