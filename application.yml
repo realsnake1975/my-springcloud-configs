@@ -20,6 +20,14 @@ server:
   shutdown: graceful
 
 spring:
+  cloud:
+    bus:
+      id: ${spring.application.name}:${spring.profiles.active}:${random.uuid}
+      enabled: true
+      refresh:
+        enabled: true
+      env:
+        enabled: true
   messages:
     basename: i18n/messages
     encoding: UTF-8
