@@ -28,6 +28,9 @@ spring:
         enabled: true
       env:
         enabled: true
+    loadbalancer:
+      cache:
+        enabled: false
   messages:
     basename: i18n/messages
     encoding: UTF-8
