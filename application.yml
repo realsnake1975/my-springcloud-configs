@@ -86,12 +86,14 @@ management:
   endpoint:
     health:
       show-details: never
+    info:
+      enabled: true
   endpoints:
+    enabled-by-default: true
     web:
       exposure:
         include:
-          - "health"
-          - "metrics"
+          - health
 
 # logging
 logging:
