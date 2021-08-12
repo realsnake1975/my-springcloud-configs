@@ -4,9 +4,6 @@ server:
 spring:
   application:
     name: gateway-server
-  sleuth:
-    sampler:
-      probability: 1.0
   cloud:
     # https://pamesh12.github.io/spring-cloud/spring-cloud-bus.html
     # https://medium.com/@athulravindran/spring-cloud-config-server-auto-refresh-using-apache-kafka-in-kubernetes-86e3c427926e
