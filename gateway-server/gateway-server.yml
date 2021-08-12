@@ -50,15 +50,10 @@ eureka:
     prefer-ip-address: true
 
 management:
-  endpoint:
-    info:
-      enabled: true
   endpoints:
-    enabled-by-default: true
     web:
       exposure:
         # curl -X POST "http://localhost:8888/actuator/busrefresh", @RefreshScope가 있는 빈의 모든 prop 리프레쉬
         include:
           - busrefresh
           - busenv
-          - health
