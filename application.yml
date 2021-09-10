@@ -115,6 +115,9 @@ management:
 logging:
   level:
     root: info
+    com:
+      netflix:
+        discovery: error
     my:
       springcloud: error
     org:
