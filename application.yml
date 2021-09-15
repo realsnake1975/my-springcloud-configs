@@ -6,7 +6,8 @@ server:
     uri-encoding: UTF-8
     threads:
       max: 200
-    max-swallow-size: -1
+    max-swallow-size: 100MB
+    max-http-post-size: 100MB
   error:
     whitelabel:
       enabled: false
