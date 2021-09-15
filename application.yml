@@ -6,8 +6,8 @@ server:
     uri-encoding: UTF-8
     threads:
       max: 200
-    max-swallow-size: 100MB
-    max-http-post-size: 100MB
+#     max-swallow-size: 100MB
+#     max-http-post-size: 100MB
   error:
     whitelabel:
       enabled: false
@@ -40,8 +40,8 @@ spring:
     use-code-as-default-message: true
   servlet:
     multipart:
-      max-file-size: 100MB
-      max-request-size: 100MB
+      max-file-size: 200MB
+      max-request-size: 200MB
   sleuth:
     sampler:
       probability: 1.0
